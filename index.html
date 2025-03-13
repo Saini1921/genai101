@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dinosaur Facts</h1>
+        <button id="factButton">Show a Dinosaur Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Dinosaurs lived on Earth for about 165 million years.",
+            "The word 'dinosaur' means 'terrible lizard' in Greek.",
+            "Some dinosaurs were as small as chickens, like the Compsognathus.",
+            "The largest dinosaur ever discovered is believed to be Argentinosaurus, which could reach lengths of over 100 feet.",
+            "Dinosaurs are divided into two main groups: Saurischia and Ornithischia.",
+            "The Stegosaurus had a brain the size of a walnut.",
+            "Some dinosaurs had feathers, and birds are considered their modern descendants.",
+            "The Tyrannosaurus rex had the strongest bite of any land animal that ever lived.",
+            "The first dinosaur fossil was discovered in 1824 by William Buckland.",
+            "Dinosaurs went extinct about 65 million years ago, likely due to a massive asteroid impact."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
